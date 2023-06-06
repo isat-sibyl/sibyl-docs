@@ -1,7 +1,7 @@
 root: "/"
 default_locale: "en"
 open_browser: true
-debug: true
+debug: false
 
 max_component_nesting: 100
 components_paths: 
