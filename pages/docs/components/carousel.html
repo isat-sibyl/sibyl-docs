@@ -1,0 +1,30 @@
+<template layout="main_layout" title="Components - Carousel">
+	<section>
+		<Component name="Markdown" style="max-width: 800px">
+			# Carousel Component
+
+			The `Carousel` component provides a responsive carousel functionality for showcasing a series of content. The carousel automatically cycles through the slides, but also offers navigation buttons for manual control. This component is particularly useful for features like image galleries or product slideshows.
+
+			## Props
+
+			The `Carousel` component does not take any specific props.
+
+			## Slots
+
+			| Slot  | Description |
+			| ----- | ----------- |
+			| Default | The slides to be displayed within the carousel. |
+
+			## General Usage Notes
+
+			1. The `Carousel` component is responsive, meaning it adapts to different screen sizes and viewports.
+			2. This component uses the CSS Scroll Snap Points module to create a smooth scrolling experience and ensure that a slide always lands in the center of the carousel when scrolling.
+			3. By default, the carousel is set to auto-play the slides with an animation. This behavior can be overridden by interacting with the carousel either through hovering or by setting the `prefers-reduced-motion` media feature to `reduce`.
+			4. Navigation buttons are provided which allow the user to manually navigate through the carousel. These buttons are hidden on mobile screens to optimize space.
+			5. The slides within the carousel should be placed in the default slot. Each slide should be wrapped with a `carousel__slide` class for proper styling.
+			6. The carousel component provides a drop shadow effect around the carousel for better distinction against the background.
+			7. For improved accessibility, an `aria-label` is added to the main carousel div. This label can be overridden by passing a `label` prop to the component.
+
+		</Component>
+	</section>
+</template>

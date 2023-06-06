@@ -1,0 +1,148 @@
+<template layout="main_layout" title="Components">
+	<section>
+		<Component name="Markdown" style="max-width: 800px">
+			# Components
+
+			Components in Sibyl are reusable pieces of code that can be used to structure your web pages more effectively. Components encapsulate functionality and allow for modularity, which makes your code easier to maintain and scale.
+
+			## Structure of a Component
+
+			A component consists of four parts:
+
+			1. **HTML (`template` tag)**: This is the structure or layout of your component. It includes HTML tags and special directives provided by Sibyl, such as `render-if` for conditional rendering, `for-each` for iterating over arrays, and more.
+
+			2. **Python (`python` tag)**: This is where you can include Python code to handle logic in your component. This Python code runs when the component is rendered. It can have an optional phase of execution, defaulting to run when entering the component and "cleanup" to run when leaving the component.
+
+			3. **CSS (`style` tag)**: This is where you style your component. The CSS is scoped to the component, which means it only applies to the HTML within this component.
+
+			4. **JavaScript (`script` tag)**: This is where you can include JavaScript code that is executed on the client side. This can be useful for adding interactivity to your components.
+
+			Here's an example of a component:
+
+			```html
+			&lt;template&gt;
+				&lt;!-- Your HTML goes here --&gt;
+			&lt;/template&gt;
+
+			&lt;python&gt;
+				# Your Python code goes here
+			&lt;/python&gt;
+
+			&lt;style&gt;
+				/* Your CSS goes here */
+			&lt;/style&gt;
+			
+			&lt;script&gt;
+				// Your JavaScript goes here
+			&lt;/script&gt;
+			```
+
+			## Using a Component
+
+			To use a component in your layouts or pages, use the `Component` tag with the `name` attribute set to the component's name. 
+
+			For example, here's how you can include the `DrawerItem` component in another component or layout:
+
+			```html
+			&lt;Component render-if="drawerItems" name="Drawer"&gt;
+				&lt;Component 
+					name="DrawerItem" 
+					for-each="drawerItem in drawerItems" 
+					item="\{{ drawerItem }}"
+				/&gt;
+			&lt;/Component&gt;
+			```
+
+			In this example, DrawerItem is the name of the component, for-each is a directive that loops over the drawerItems array, and item is a prop that passes the current drawerItem to the DrawerItem component.
+
+			You can also pass variables to a component using attributes. In the example above, the drawerItem variable is passed to the DrawerItem component using the item attribute.
+
+			## Variable Naming Conventions
+
+			In Sibyl, variables (props) are passed to components using kebab-case (e.g., drawer-item) and accessed within the component using camelCase (e.g., drawerItem). This naming convention keeps the code clean and consistent, while also avoiding naming conflicts with HTML attributes, which are case-insensitive.
+
+			## Slots
+			Slots in Sibyl provide a way to pass content from a parent component to its child component. They allow for greater flexibility and customization by enabling dynamic content injection.
+
+			### Defining a Slot
+			To define a slot in a component, use the `Slot` tag with a specified name. This name serves as a placeholder for the content that will be passed into the slot. Here's an example:
+
+			```html
+			&lt;template&gt;
+				&lt;div&gt;
+					&lt;h1&gt;Welcome to My Website&lt;/h1&gt;
+					&lt;Slot name="Content"&gt;&lt;/Slot&gt;
+				&lt;/div&gt;
+			&lt;/template&gt;
+			```
+
+			In this example, the `Slot` tag with the name attribute set to "content" acts as a placeholder for the content that will be injected into the slot.
+
+			### Using a Slot
+
+			To inject content into a slot, use a tag with the specified name within the parent component. Here's an example of using the slot defined above:
+			
+			```html
+			&lt;Component name="MyComponent"&gt;
+				&lt;p&gt;This is some custom content.&lt;/p&gt;
+				&lt;p&gt;More content can be added here.&lt;/p&gt;
+				&lt;Content&gt; &lt;!-- This is the slot --&gt;
+					&lt;p&gt;This content will be injected into the slot.&lt;/p&gt;
+				&lt;/Content&gt;
+			&lt;/Component&gt;
+			```
+
+			### Default Slot Content
+			You can also provide default content for a slot by placing it between the opening and closing `Slot` tags in the child component. This default content will be used if no content is provided from the parent component. Here's an example:
+			
+			```html
+			&lt;template&gt;
+				&lt;div&gt;
+					&lt;h1&gt;Welcome to My Website&lt;/h1&gt;
+					&lt;Slot name="content"&gt;
+						&lt;p&gt;This is the default content for the slot.&lt;/p&gt;
+					&lt;/Slot&gt;
+				&lt;/div&gt;
+			&lt;/template&gt;
+			```
+
+			### The Default Slot
+
+			You can also use the default slot to pass content to a component. This is useful when you want to pass content to a component without having to define a slot in the component. To define the default slot, simply create an unnamed slot. Here's an example:
+
+			```html
+			&lt;Component name="MyComponent"&gt;
+				&lt;p&gt;This is some custom content.&lt;/p&gt;
+				&lt;p&gt;More content can be added here.&lt;/p&gt;
+				&lt;!-- This is the default slot --&gt;
+				&lt;p&gt;This content will be injected into the default slot.&lt;/p&gt;
+			&lt;/Component&gt;
+
+			And the component:
+
+			```html
+			&lt;template&gt;
+				&lt;div&gt;
+					&lt;h1&gt;Welcome to My Website&lt;/h1&gt;
+					&lt;Slot&gt; &lt;!-- This is the default slot, since it has no name --&gt;
+						&lt;p&gt;This is the default content for the slot.&lt;/p&gt;
+					&lt;/Slot&gt;
+				&lt;/div&gt;
+			&lt;/template&gt;
+
+
+			## Benefits of Using Components
+
+			Components provide several benefits:
+
+			1. **Reusability:** Once you've defined a component, you can reuse it in multiple places, reducing code duplication.
+			2. **Modularity:** Components allow you to split your code into smaller, more manageable pieces.
+			3. **Flexibility:** By passing props to components, you can create flexible components that can be customized for each use case.
+			4. **Interactivity:** By including JavaScript in your components, you can add interactivity and enhance the user experience.
+
+			## Scoped styles
+
+			Styles aren't scoped to a component. This means you should be careful with your CSS selectors to avoid conflicts with other components. For example, if you have a component with a class of `button`, you should use a more specific selector like `button.my-component-button` instead of just `.button` to avoid conflicts with other components that may also have a class of `button`.
+		</Component>
+	</section>
+</template>

@@ -1,0 +1,101 @@
+<template layout="main_layout" title="Components - Carousel">
+ <section>
+  <div class="markdown-container" style="max-width: 800px">
+   <h1>
+    Carousel Component
+   </h1>
+   <p>
+    The
+    <code>
+     Carousel
+    </code>
+    component provides a responsive carousel functionality for showcasing a series of content. The carousel automatically cycles through the slides, but also offers navigation buttons for manual control. This component is particularly useful for features like image galleries or product slideshows.
+   </p>
+   <h2>
+    Props
+   </h2>
+   <p>
+    The
+    <code>
+     Carousel
+    </code>
+    component does not take any specific props.
+   </p>
+   <h2>
+    Slots
+   </h2>
+   <table>
+    <thead>
+     <tr>
+      <th>
+       Slot
+      </th>
+      <th>
+       Description
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       Default
+      </td>
+      <td>
+       The slides to be displayed within the carousel.
+      </td>
+     </tr>
+    </tbody>
+   </table>
+   <h2>
+    General Usage Notes
+   </h2>
+   <ol>
+    <li>
+     The
+     <code>
+      Carousel
+     </code>
+     component is responsive, meaning it adapts to different screen sizes and viewports.
+    </li>
+    <li>
+     This component uses the CSS Scroll Snap Points module to create a smooth scrolling experience and ensure that a slide always lands in the center of the carousel when scrolling.
+    </li>
+    <li>
+     By default, the carousel is set to auto-play the slides with an animation. This behavior can be overridden by interacting with the carousel either through hovering or by setting the
+     <code>
+      prefers-reduced-motion
+     </code>
+     media feature to
+     <code>
+      reduce
+     </code>
+     .
+    </li>
+    <li>
+     Navigation buttons are provided which allow the user to manually navigate through the carousel. These buttons are hidden on mobile screens to optimize space.
+    </li>
+    <li>
+     The slides within the carousel should be placed in the default slot. Each slide should be wrapped with a
+     <code>
+      carousel__slide
+     </code>
+     class for proper styling.
+    </li>
+    <li>
+     The carousel component provides a drop shadow effect around the carousel for better distinction against the background.
+    </li>
+    <li>
+     For improved accessibility, an
+     <code>
+      aria-label
+     </code>
+     is added to the main carousel div. This label can be overridden by passing a
+     <code>
+      label
+     </code>
+     prop to the component.
+    </li>
+   </ol>
+  </div>
+ </section>
+</template>

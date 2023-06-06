@@ -1,0 +1,46 @@
+<template layout="main_layout" title="Components - Drawer Item">
+	<section>
+		<Component name="Markdown" style="max-width: 800px">
+			# DrawerItem Component
+
+			The `DrawerItem` component is used as part of the `Drawer` component to render individual items within the drawer. It supports nested items and conditional rendering for different types of items.
+
+			## Props
+
+			The `DrawerItem` component accepts an `item` prop which is expected to be an object (or string representing an object) with the following properties:
+
+			| Property  | Description |
+			| --------- | ----------- |
+			| `id`      | A unique identifier for the item. Used to map the checkbox with its corresponding label. |
+			| `icon`    | The name of the icon to be displayed for the item. |
+			| `label`   | The label text to be displayed for the item. |
+			| `href`    | The URL for the item to link to. If present, the item will render as an external link (`<a>` element with `target="_blank"` and `rel="noreferrer noopener"`). |
+			| `page`    | The path for the item to link to within the app. If present, the item will render as a router link (`<a>` element). |
+			| `children`| An array of similar objects representing sub-items. If present, the item will render as a collapsible section containing its children. |
+
+			## Slots
+
+			The `DrawerItem` component does not provide slots.
+
+			## CSS Variables
+
+			The `DrawerItem` component does not use any CSS variables.
+
+			## Global Variables
+
+			The `DrawerItem` component uses the following global variable:
+
+			| Variable | Description |
+			| -------- | ----------- |
+			| `SIBYL_ROOT` | The root path of the app. Used when creating router links. |
+
+			## General Usage Notes
+
+			* The `DrawerItem` component is designed to be used within the `Drawer` component. It may not work as expected if used in isolation or in a different context.
+			* The `DrawerItem` component uses recursion to render nested items. Therefore, the structure of the `item` prop can be arbitrarily deep, as long as each item follows the same structure.
+			* The `DrawerItem` component includes a `DrawerItemInner` component (not shown here), which is used to render the icon and label for each item.
+			* `DrawerItem` component uses the conditional rendering attributes `render-if` and `render-elif` to decide how to render each item. This is based on the presence of the `href`, `page`, or `children` properties in the `item` prop.
+
+		</Component>
+	</section>
+</template>

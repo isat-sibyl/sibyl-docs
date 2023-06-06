@@ -1,0 +1,68 @@
+<template layout="main_layout" title="Locales">
+ <section>
+  <div class="markdown-container" style="max-width: 800px">
+   <h1>
+    Locale Files
+   </h1>
+   <p>
+    Locale files in Sibyl are JSON files that store localization data. These files allow you to manage different language versions of your web pages conveniently and effectively.
+   </p>
+   <h2>
+    Structure of Locale Files
+   </h2>
+   <p>
+    Each locale is represented by a JSON file within the
+    <code>
+     locales
+    </code>
+    directory. The file's name corresponds to the locale's code. For instance, for an English locale, you would have an
+    <code>
+     en.json
+    </code>
+    file, and for a French locale, a
+    <code>
+     fr.json
+    </code>
+    file.
+   </p>
+   <p>
+    A locale file is a JSON object that contains key-value pairs. The key is a string that represents the variable name, and the value is the localized string.
+   </p>
+   <p>
+    Here's a simple example:
+   </p>
+   <div class="codehilite">
+    <pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">"siteName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"My Website"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"welcomeMessage"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Welcome to my website!"</span>
+<span class="p">}</span>
+</code></pre>
+   </div>
+   <p>
+    In this example, siteName and welcomeMessage are variable names, and "My Website" and "Welcome to my website!" are the corresponding English translations.
+   </p>
+   <h2>
+    Using Locale Variables
+   </h2>
+   <p>
+    To use a variable from a locale file in your layouts or pages, use the double curly braces {{ }} syntax. For example, to insert the site name into a page, you would use {{ siteName }}.
+   </p>
+   <h2>
+    Global Locale
+   </h2>
+   <p>
+    In addition to the locale-specific files, there's a global.json file that contains variables available in all locales. If a variable is defined in both a locale file and the global file, the locale-specific value will take precedence.
+   </p>
+   <h2>
+    Sibyl's Predefined Variables
+   </h2>
+   <p>
+    Sibyl also provides some predefined variables for convenience, described in
+    <a href="/en/docs/variables">
+     Variables
+    </a>
+    .
+   </p>
+  </div>
+ </section>
+</template>

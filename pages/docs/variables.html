@@ -1,0 +1,48 @@
+<template layout="main_layout" title="Pages">
+	<section>
+		<Component name="Markdown" style="max-width: 800px">
+			# Variables
+
+			Variables in web development represent data that can change or be modified. They are utilized to store information that can be reused throughout a web page, a site, or a web application.
+
+			Variables in Sibyl can be defined in three ways:
+
+			1. **In a specific locale:** Variables are stored inside a `LOCALE.json` file within the `locales` directory. Each locale will have its respective `.json` file.
+
+			2. **In the global locale:** Variables are saved in the `global.json` file. These variables are accessible across all locales.
+
+			3. **Passing variables to a component:** You can pass variables directly to a component when it's invoked in the layout or a page. These variables are only accessible within that component.
+
+			Besides user-defined variables, Sibyl defines several variables for internal usage. These variables provide information about the current page, locale, Sibyl version, and more.
+
+			Here are the Sibyl variables:
+
+			| Variable | Description |
+			| --- | --- |
+			| `SIBYL_LOCALE` | The current locale |
+			| `SIBYL_ROOT` | The link to the current locale's root page |
+			| `SIBYL_PAGE` | The relative path of the current page |
+			| `SIBYL_LOCALES` | The list of available locales |
+			| `SIBYL_VERSION` | The current version of Sibyl |
+			| `SIBYL_OTHER_LOCALES` | The locales excluding the current locale |
+			| `__SIBYL_COMPONENT_TAG__` | The bs4 tag of the current component, to be used inside `python` tags |
+
+			Using these variables, you can tailor your pages to the current locale, page, and other environmental variables. For instance, when defining links, you should use the `SIBYL_ROOT` variable to ensure that the link is relative to the current locale.
+
+			For example:
+			
+			```html
+			&lt;a href="{{ SIBYL_ROOT }}about"&gt;About&lt;/a&gt;
+			```
+
+			## Scope
+
+			Variables defined in a locale file are accessible in all pages and components. Variables defined in the global locale are accessible in all locales. Variables passed to a component are only accessible within that component.
+
+			If a variable is defined in both a locale file and the global file, the locale-specific value will take precedence. The same applies to variables passed to a component and variables defined in a locale file, with the component variable taking precedence.
+
+			Do keep in mind this priority system does not replace variable. When entering a component, the component's variables will be used. When exiting the component, the previous variables will be restored.
+
+		</Component>
+	</section>
+</template>

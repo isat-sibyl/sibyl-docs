@@ -1,0 +1,37 @@
+<template layout="main_layout" title="Components - Carousel Slide">
+	<section>
+		<Component name="Markdown" style="max-width: 800px">
+			# Carousel Slide Component
+
+			The `Carousel Slide` component is a child component of the `Carousel` component, designed specifically to be used for individual slides within a carousel.
+
+			## Props
+
+			| Prop | Type | Description |
+			| ---- | ---- | ----------- |
+			| `slide` | Number | Specifies the unique identifier for the slide. This prop is mandatory and unique for each slide in a carousel. |
+
+			## Slots
+
+			| Slot  | Description |
+			| ----- | ----------- |
+			| Default | The contents of the slide to be displayed within the carousel. |
+
+			## CSS Variables
+
+			The `Carousel Slide` component does not use any CSS variables.
+
+			## Global Variables
+
+			The `Carousel Slide` component does not use any global variables.
+
+			## General Usage Notes
+
+			1. Each slide within the carousel should be a `Carousel Slide` component.
+			2. The `slide` prop should be unique for each slide in a carousel and is used for generating the `id` of the slide, as well as for navigation purposes.
+			3. The contents of the slide (e.g. an image, text, etc.) should be placed in the default slot.
+			4. The `Carousel Slide` component automatically applies appropriate styling for the slide, and includes a `carousel__snapper` div for scroll snapping purposes.
+			5. The slide is accessible via keyboard navigation using the `tabindex` attribute.
+		</Component>
+	</section>
+</template>

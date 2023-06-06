@@ -1,0 +1,142 @@
+<template layout="main_layout" title="Components - Carousel Slide">
+ <section>
+  <div class="markdown-container" style="max-width: 800px">
+   <h1>
+    Carousel Slide Component
+   </h1>
+   <p>
+    The
+    <code>
+     Carousel Slide
+    </code>
+    component is a child component of the
+    <code>
+     Carousel
+    </code>
+    component, designed specifically to be used for individual slides within a carousel.
+   </p>
+   <h2>
+    Props
+   </h2>
+   <table>
+    <thead>
+     <tr>
+      <th>
+       Prop
+      </th>
+      <th>
+       Type
+      </th>
+      <th>
+       Description
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       <code>
+        slide
+       </code>
+      </td>
+      <td>
+       Number
+      </td>
+      <td>
+       Specifies the unique identifier for the slide. This prop is mandatory and unique for each slide in a carousel.
+      </td>
+     </tr>
+    </tbody>
+   </table>
+   <h2>
+    Slots
+   </h2>
+   <table>
+    <thead>
+     <tr>
+      <th>
+       Slot
+      </th>
+      <th>
+       Description
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       Default
+      </td>
+      <td>
+       The contents of the slide to be displayed within the carousel.
+      </td>
+     </tr>
+    </tbody>
+   </table>
+   <h2>
+    CSS Variables
+   </h2>
+   <p>
+    The
+    <code>
+     Carousel Slide
+    </code>
+    component does not use any CSS variables.
+   </p>
+   <h2>
+    Global Variables
+   </h2>
+   <p>
+    The
+    <code>
+     Carousel Slide
+    </code>
+    component does not use any global variables.
+   </p>
+   <h2>
+    General Usage Notes
+   </h2>
+   <ol>
+    <li>
+     Each slide within the carousel should be a
+     <code>
+      Carousel Slide
+     </code>
+     component.
+    </li>
+    <li>
+     The
+     <code>
+      slide
+     </code>
+     prop should be unique for each slide in a carousel and is used for generating the
+     <code>
+      id
+     </code>
+     of the slide, as well as for navigation purposes.
+    </li>
+    <li>
+     The contents of the slide (e.g. an image, text, etc.) should be placed in the default slot.
+    </li>
+    <li>
+     The
+     <code>
+      Carousel Slide
+     </code>
+     component automatically applies appropriate styling for the slide, and includes a
+     <code>
+      carousel__snapper
+     </code>
+     div for scroll snapping purposes.
+    </li>
+    <li>
+     The slide is accessible via keyboard navigation using the
+     <code>
+      tabindex
+     </code>
+     attribute.
+    </li>
+   </ol>
+  </div>
+ </section>
+</template>

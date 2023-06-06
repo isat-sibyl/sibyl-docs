@@ -1,0 +1,26 @@
+<template layout="main_layout" title="Layouts">
+	<section>
+		<Component name="Markdown" style="max-width: 800px">
+			# Layouts
+
+			A layout is a foundational blueprint that establishes the overall structure of a web page. It consists of the base HTML code that's essential for rendering multiple pages and generally incorporates components that are common across various pages, such as headers, footers, and navigation menus. This shared structure reduces code repetition and simplifies maintenance.
+
+			Layouts are typically defined in a `layouts` directory. The specific layout that a page utilizes is determined by the `template` tag within the page's code.
+
+			## Creating a Layout
+
+			To create a new layout, a new HTML file must be added to the `layouts` directory. The filename corresponds to the layout's name. For example, a layout titled `main_layout` would be represented by a file named `main_layout.html` within the `layouts` directory.
+
+			## Functionalities and Variables
+
+			Layouts can encompass a range of functionalities. For instance, your layout can include a `style` element, which introduces CSS to style the pages. It also can include the `script` tag to add JavaScript, enabling interactivity and dynamic features.
+
+			Your layout can use placeholders, such as `\{{SIBYL_LOCALE}}`, `\{{siteName}}`, and `\{{siteDescription}}`. These represent variables that can be dynamically replaced with actual values when the page is rendered, which further enhances the flexibility of your layouts. See the [Variables]({{SIBYL_ROOT}}docs/variables) page for more information.
+
+			The layout also leverages Components and Slots, which provide modular pieces of code that can be reused throughout the site. `&lt;Component name="Header" /&gt;`, `&lt;Component name="Footer"/&gt;`, and `&lt;Slot name="template"&gt;&lt;/Slot&gt;` are examples of this.
+
+			Additionally, your layout should include a `meta` viewport tag, essential for responsive web design. It ensures your webpage looks good on all devices (desktops, tablets, and phones).
+
+		</Component>
+	</section>
+</template>

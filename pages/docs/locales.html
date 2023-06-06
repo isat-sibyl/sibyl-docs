@@ -1,0 +1,35 @@
+<template layout="main_layout" title="Locales">
+	<section>
+		<Component name="Markdown" style="max-width: 800px">
+			# Locale Files
+
+			Locale files in Sibyl are JSON files that store localization data. These files allow you to manage different language versions of your web pages conveniently and effectively. 
+
+			## Structure of Locale Files
+
+			Each locale is represented by a JSON file within the `locales` directory. The file's name corresponds to the locale's code. For instance, for an English locale, you would have an `en.json` file, and for a French locale, a `fr.json` file.
+
+			A locale file is a JSON object that contains key-value pairs. The key is a string that represents the variable name, and the value is the localized string.
+
+			Here's a simple example:
+
+			```json
+			{
+				"siteName": "My Website",
+				"welcomeMessage": "Welcome to my website!"
+			}
+			```
+			In this example, siteName and welcomeMessage are variable names, and "My Website" and "Welcome to my website!" are the corresponding English translations.
+
+			## Using Locale Variables
+			To use a variable from a locale file in your layouts or pages, use the double curly braces \\{{ }} syntax. For example, to insert the site name into a page, you would use \\{{ siteName }}.
+
+			## Global Locale
+			In addition to the locale-specific files, there's a global.json file that contains variables available in all locales. If a variable is defined in both a locale file and the global file, the locale-specific value will take precedence.
+
+			## Sibyl's Predefined Variables
+			Sibyl also provides some predefined variables for convenience, described in [Variables]({{SIBYL_ROOT}}docs/variables).
+
+		</Component>
+	</section>
+</template>

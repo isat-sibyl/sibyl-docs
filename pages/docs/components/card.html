@@ -1,0 +1,27 @@
+<template layout="main_layout" title="Components - Card">
+	<section>
+		<Component name="Markdown" style="max-width: 800px">
+			# Card Component
+
+			The `Card` component is a container element with a pre-defined style. It provides a way to group and present related content in a flexible and extensible container with a shadow effect to give it a 'lifting' appearance.
+
+			## Props
+
+			The `Card` component does not take any specific props.
+
+			## Slots
+
+			| Slot  | Description |
+			| ----- | ----------- |
+			| Default | The content to be displayed within the card. |
+
+			## General Usage Notes
+
+			1. The `Card` component comes with a box-shadow effect to create the appearance of depth. This is particularly useful for distinguishing the card from the background, especially on light-colored themes.
+			2. Images placed as the first child within the card have styles applied to them to span the full width of the card.
+			3. The `Card` component has a hover effect that increases its scale, giving it a 'popping' effect. This effect can be disabled by adding a class of `no-hover` to the component.
+			4. The `Card` component adapts to the size of its content, with a `height` set to `fit-content`.
+			5. The `Card` component is designed with a maximum width of 300px and a minimum padding of 20px.
+		</Component>
+	</section>
+</template>

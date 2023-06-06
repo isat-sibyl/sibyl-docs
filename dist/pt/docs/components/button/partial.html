@@ -1,0 +1,228 @@
+<template layout="main_layout" title="Components - Button">
+ <section>
+  <div class="markdown-container" style="max-width: 800px">
+   <h1>
+    Button Component
+   </h1>
+   <p>
+    The
+    <code>
+     Button
+    </code>
+    component is a versatile, styled button element that can be used for various purposes in a web application. It can be used to navigate to different parts of the same page, to different pages, or to external links.
+   </p>
+   <h2>
+    Props
+   </h2>
+   <table>
+    <thead>
+     <tr>
+      <th>
+       Prop
+      </th>
+      <th>
+       Description
+      </th>
+      <th>
+       Type
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       color
+      </td>
+      <td>
+       The background color of the button. If no color is passed, it defaults to the primary color defined in the application's CSS variables.
+      </td>
+      <td>
+       String
+      </td>
+     </tr>
+     <tr>
+      <td>
+       iconLeft
+      </td>
+      <td>
+       The icon to be displayed to the left of the button label.
+      </td>
+      <td>
+       String
+      </td>
+     </tr>
+     <tr>
+      <td>
+       iconRight
+      </td>
+      <td>
+       The icon to be displayed to the right of the button label.
+      </td>
+      <td>
+       String
+      </td>
+     </tr>
+     <tr>
+      <td>
+       label
+      </td>
+      <td>
+       The text displayed on the button.
+      </td>
+      <td>
+       String
+      </td>
+     </tr>
+     <tr>
+      <td>
+       page
+      </td>
+      <td>
+       The path to the page to which the button should link.
+      </td>
+      <td>
+       String
+      </td>
+     </tr>
+     <tr>
+      <td>
+       href
+      </td>
+      <td>
+       The external URL to which the button should link.
+      </td>
+      <td>
+       String
+      </td>
+     </tr>
+     <tr>
+      <td>
+       anchor
+      </td>
+      <td>
+       The anchor on the current page to which the button should link.
+      </td>
+      <td>
+       String
+      </td>
+     </tr>
+    </tbody>
+   </table>
+   <h2>
+    Slots
+   </h2>
+   <table>
+    <thead>
+     <tr>
+      <th>
+       Slot
+      </th>
+      <th>
+       Description
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       Default
+      </td>
+      <td>
+       The content that is displayed within the button.
+      </td>
+     </tr>
+    </tbody>
+   </table>
+   <h2>
+    Exclusivity of Props
+   </h2>
+   <p>
+    The
+    <code>
+     Button
+    </code>
+    component determines its behavior based on the presence of the
+    <code>
+     page
+    </code>
+    ,
+    <code>
+     href
+    </code>
+    , and
+    <code>
+     anchor
+    </code>
+    props. These are mutually exclusive and at least one should be defined in order to avoid undefined behavior.
+   </p>
+   <h2>
+    General Usage Notes
+   </h2>
+   <ol>
+    <li>
+     The
+     <code>
+      color
+     </code>
+     prop can take both direct color values (hex, rgb, or hsl) or a color. If a color is received, it's interpreted as a CSS variable name. For instance,
+     <code>
+      primary
+     </code>
+     evaluates to
+     <code>
+      --var(primary)
+     </code>
+     .
+    </li>
+    <li>
+     The
+     <code>
+      iconLeft
+     </code>
+     and
+     <code>
+      iconRight
+     </code>
+     props can be used to specify icons to be displayed on either side of the button label. These icons are rendered as
+     <code>
+      Icon
+     </code>
+     components and are spaced appropriately from the label.
+    </li>
+    <li>
+     The
+     <code>
+      Button
+     </code>
+     component automatically decides which type of button to render based on the
+     <code>
+      page
+     </code>
+     ,
+     <code>
+      href
+     </code>
+     , and
+     <code>
+      anchor
+     </code>
+     props.
+    </li>
+    <li>
+     The
+     <code>
+      Button
+     </code>
+     component adds a hover effect that increases the button's scale, giving it a 'popping' effect.
+    </li>
+    <li>
+     The
+     <code>
+      Button
+     </code>
+     component has a responsive design, with a smaller font size under 375px screen width.
+    </li>
+   </ol>
+  </div>
+ </section>
+</template>

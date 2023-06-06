@@ -1,0 +1,40 @@
+<template layout="main_layout" title="Components">
+	<section>
+		<Component name="Markdown" style="max-width: 800px">
+			# Conditional Rendering and Loops 
+
+			## Conditional Rendering
+
+			The conditional rendering attributes `render-if`, `render-elif`, and `render-else` are used to control whether a piece of code or a component should be rendered based on certain conditions.
+
+			For example:
+
+			```html
+			&lt;div render-if="condition1"&gt;...&lt;/div&gt;
+			&lt;div render-elif="condition2"&gt;...&lt;/div&gt;
+			&lt;div render-else&gt;...&lt;/div&gt;
+			```
+
+			- `render-if`: Renders the element if the condition specified evaluates to true.
+
+			- `render-elif`: Used when you have more than one condition. It will render the element if the previous conditions are false and the current condition is true.
+
+			- `render-else`: Used at the end of a series of `render-if` and `render-elif` conditions. It renders the element if all the previous conditions are false. 
+
+			## Loops
+
+			The `for-each` attribute is used to loop over a list of items. It's equivalent to the `for..in` loop in other languages.
+
+			```html
+			&lt;ul&gt;
+				&lt;li for-each="item in items"&gt;
+					\{{item}}
+				&lt;/li&gt;
+			&lt;/ul&gt;
+			```
+
+			This attribute is used to iterate over an array of items or anything else that's iterable in Python, like a string. It renders the HTML element it is attached to for each item in the array.
+
+		</Component>
+	</section>
+</template>

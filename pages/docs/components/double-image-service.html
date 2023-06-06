@@ -1,0 +1,44 @@
+<template layout="main_layout" title="Components - Double Image Service">
+	<section>
+		<Component name="Markdown" style="max-width: 800px">
+			# Double Service Component
+
+			The `Double Service` component presents a dual-panel content display, each with its own title, subtitle and content, separated by an image.
+
+			## Props
+
+			The `Double Service` component accepts the following props:
+
+			| Prop        | Description |
+			| ----------- | ----------- |
+			| `title`     | Sets the title for the left-side content. |
+			| `subtitle`  | Sets the subtitle for the left-side content. |
+			| `content`   | Sets the content for the left-side content. |
+			| `image`     | Sets the source of the image to be displayed between the two panels. |
+			| `title2`    | Sets the title for the right-side content. |
+			| `subtitle2` | Sets the subtitle for the right-side content. |
+			| `content2`  | Sets the content for the right-side content. |
+
+			## Slots
+
+			The `Double Service` component provides two slots for customization:
+
+			| Slot         | Description |
+			| ------------ | ----------- |
+			| `LeftContent`  | The default content of this slot will be replaced with the provided `content` prop, or you can manually override it. |
+			| `RightContent` | The default content of this slot will be replaced with the provided `content2` prop, or you can manually override it. |
+
+			## CSS Variables
+
+			The `Double Service` component does not use any CSS variables.
+
+			## Global Variables
+
+			The `Double Service` component does not use any global variables.
+
+			## General Usage Notes
+
+			The `Double Service` component is flexible and can adapt to various viewport sizes due to its use of the CSS `flex` layout model and `max-width` properties. It adjusts the positioning of the content blocks based on the available space.
+		</Component>
+	</section>
+</template>

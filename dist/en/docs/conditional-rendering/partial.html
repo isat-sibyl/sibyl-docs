@@ -1,0 +1,95 @@
+<template layout="main_layout" title="Components">
+ <section>
+  <div class="markdown-container" style="max-width: 800px">
+   <h1>
+    Conditional Rendering and Loops
+   </h1>
+   <h2>
+    Conditional Rendering
+   </h2>
+   <p>
+    The conditional rendering attributes
+    <code>
+     render-if
+    </code>
+    ,
+    <code>
+     render-elif
+    </code>
+    , and
+    <code>
+     render-else
+    </code>
+    are used to control whether a piece of code or a component should be rendered based on certain conditions.
+   </p>
+   <p>
+    For example:
+   </p>
+   <div class="codehilite">
+    <pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">render-if</span><span class="o">=</span><span class="s">"condition1"</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">render-elif</span><span class="o">=</span><span class="s">"condition2"</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">render-else</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre>
+   </div>
+   <ul>
+    <li>
+     <p>
+      <code>
+       render-if
+      </code>
+      : Renders the element if the condition specified evaluates to true.
+     </p>
+    </li>
+    <li>
+     <p>
+      <code>
+       render-elif
+      </code>
+      : Used when you have more than one condition. It will render the element if the previous conditions are false and the current condition is true.
+     </p>
+    </li>
+    <li>
+     <p>
+      <code>
+       render-else
+      </code>
+      : Used at the end of a series of
+      <code>
+       render-if
+      </code>
+      and
+      <code>
+       render-elif
+      </code>
+      conditions. It renders the element if all the previous conditions are false.
+     </p>
+    </li>
+   </ul>
+   <h2>
+    Loops
+   </h2>
+   <p>
+    The
+    <code>
+     for-each
+    </code>
+    attribute is used to loop over a list of items. It's equivalent to the
+    <code>
+     for..in
+    </code>
+    loop in other languages.
+   </p>
+   <div class="codehilite">
+    <pre><span></span><code><span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span> <span class="na">for-each</span><span class="o">=</span><span class="s">"item in items"</span><span class="p">&gt;</span>
+        {{item}}
+    <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</code></pre>
+   </div>
+   <p>
+    This attribute is used to iterate over an array of items or anything else that's iterable in Python, like a string. It renders the HTML element it is attached to for each item in the array.
+   </p>
+  </div>
+ </section>
+</template>

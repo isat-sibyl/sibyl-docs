@@ -1,0 +1,30 @@
+<template layout="main_layout" title="Components - Accordion">
+	<section>
+		<Component name="Markdown" style="max-width: 800px">
+			# Accordion Component
+
+			The `Accordion` component is a user interface design pattern which shows or hides content upon user interaction. This allows content to be condensed when it isn't needed, while still allowing users to access the content at any time. 
+
+			## Props
+
+			| Prop  | Description | Type |
+			| ----- | ----------- | ---- |
+			| label | The title that is displayed in the `summary` part of the `details` HTML element. If no label is passed, "Details" will be used by default. | String |
+
+			## Slots
+
+			| Slot  | Description |
+			| ----- | ----------- |
+			| Default | The content that is hidden or displayed when interacting with the `Accordion` component. |
+
+			## General Usage Notes
+
+			1. Always ensure that the `label` prop is provided to maintain accessibility standards, if not provided it will default to "Details".
+			2. The `Accordion` component's JavaScript code uses the Web Animations API to animate the opening and closing of the accordion. 
+			3. The `Accordion` component leverages event listeners for the 'click' event. Ensure to not overload the element with additional 'click' event listeners to prevent unintended behavior.
+			4. The JavaScript part of this component initializes every element with class `accordion` on page load. If you add `accordion` elements after the page load, they won't have the interactive behavior unless manually initialized.
+			5. The `Accordion` component animates the height of the element during its open and close states. Keep this in mind when considering page reflow, and other elements that might be impacted by the dynamic change in height.
+
+		</Component>
+	</section>
+</template>

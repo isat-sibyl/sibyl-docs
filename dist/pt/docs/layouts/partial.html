@@ -1,0 +1,100 @@
+<template layout="main_layout" title="Layouts">
+ <section>
+  <div class="markdown-container" style="max-width: 800px">
+   <h1>
+    Layouts
+   </h1>
+   <p>
+    A layout is a foundational blueprint that establishes the overall structure of a web page. It consists of the base HTML code that's essential for rendering multiple pages and generally incorporates components that are common across various pages, such as headers, footers, and navigation menus. This shared structure reduces code repetition and simplifies maintenance.
+   </p>
+   <p>
+    Layouts are typically defined in a
+    <code>
+     layouts
+    </code>
+    directory. The specific layout that a page utilizes is determined by the
+    <code>
+     template
+    </code>
+    tag within the page's code.
+   </p>
+   <h2>
+    Creating a Layout
+   </h2>
+   <p>
+    To create a new layout, a new HTML file must be added to the
+    <code>
+     layouts
+    </code>
+    directory. The filename corresponds to the layout's name. For example, a layout titled
+    <code>
+     main_layout
+    </code>
+    would be represented by a file named
+    <code>
+     main_layout.html
+    </code>
+    within the
+    <code>
+     layouts
+    </code>
+    directory.
+   </p>
+   <h2>
+    Functionalities and Variables
+   </h2>
+   <p>
+    Layouts can encompass a range of functionalities. For instance, your layout can include a
+    <code>
+     style
+    </code>
+    element, which introduces CSS to style the pages. It also can include the
+    <code>
+     script
+    </code>
+    tag to add JavaScript, enabling interactivity and dynamic features.
+   </p>
+   <p>
+    Your layout can use placeholders, such as
+    <code>
+     {{SIBYL_LOCALE}}
+    </code>
+    ,
+    <code>
+     {{siteName}}
+    </code>
+    , and
+    <code>
+     {{siteDescription}}
+    </code>
+    . These represent variables that can be dynamically replaced with actual values when the page is rendered, which further enhances the flexibility of your layouts. See the
+    <a href="/pt/docs/variables">
+     Variables
+    </a>
+    page for more information.
+   </p>
+   <p>
+    The layout also leverages Components and Slots, which provide modular pieces of code that can be reused throughout the site.
+    <code>
+     &lt;Component name="Header" /&gt;
+    </code>
+    ,
+    <code>
+     &lt;Component name="Footer"/&gt;
+    </code>
+    , and
+    <code>
+     &lt;Slot name="template"&gt;&lt;/Slot&gt;
+    </code>
+    are examples of this.
+   </p>
+   <p>
+    Additionally, your layout should include a
+    <code>
+     meta
+    </code>
+    viewport tag, essential for responsive web design. It ensures your webpage looks good on all devices (desktops, tablets, and phones).
+   </p>
+  </div>
+ </section>
+</template>

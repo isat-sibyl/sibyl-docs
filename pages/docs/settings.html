@@ -1,0 +1,54 @@
+<template layout="main_layout" title="Pages">
+	<section>
+		<Component name="Markdown" style="max-width: 800px">
+			# Settings
+
+			In Sibyl, settings are stored in a file named `settings.yaml`. These settings configure the behavior of the Sibyl framework and your specific project. 
+
+			An example `settings.yaml` could look like this:
+
+			```yaml
+			root: "/"
+			default_locale: "en"
+			open_browser: true
+			debug: false
+			max_component_nesting: 100
+			components_paths: ["components", "{$SIBYL_PATH}/components"]
+			layouts_paths: ["layouts", "{$SIBYL_PATH}/layouts"]
+			root_folders: ["favicon"]
+			pages_path: "pages"
+			build_path: "dist"
+			locales_path: "locales"
+			static_path: "static"
+			cdn_url: f"https://cdn.sibyl.dev/{version}"
+			treat_warnings_as_errors: false
+			dev_port: 8080
+			websockets_port: 8081
+			```
+
+			In fact, these are the default settings. You can override them by creating a `settings.yaml` file in your project's root directory.
+
+			## Properties
+
+			| Property                  | Default Value | Description                                          |
+			| ------------------------- | ------------- | ---------------------------------------------------- |
+			| `root`                    | `"/"`         | The root path of the application                      |
+			| `default_locale`          | `"en"`        | The default locale for the application               |
+			| `open_browser`            | `true`        | Whether to automatically open the browser            |
+			| `debug`                   | `false`       | Whether to enable debug mode                          |
+			| `max_component_nesting`   | `100`         | The maximum allowed nesting level for components      |
+			| `components_paths`        | `["components", "{$SIBYL_PATH}/components"]` | List of paths to search for components |
+			| `layouts_paths`           | `["layouts", "{$SIBYL_PATH}/layouts"]` | List of paths to search for layouts |
+			| `root_folders`            | `["favicon"]` | List of root folders to be included in the build path |
+			| `pages_path`              | `"pages"`     | The path where the pages are located                  |
+			| `build_path`              | `"dist"`      | The path where the build artifacts will be generated  |
+			| `locales_path`            | `"locales"`   | The path where the locale files are located           |
+			| `static_path`             | `"static"`    | The path where the static files are located           |
+			| `cdn_url`                 | `"https://cdn.sibyl.dev/{version}"` | The URL for the Sibyl CDN |
+			| `treat_warnings_as_errors`| `false`       | Whether to treat warnings as errors                   |
+			| `dev_port`                | `8080`        | The port number for the development server            |
+			| `websockets_port`         | `8081`        | The port number for the websockets server             |
+
+		</Component>
+	</section>
+</template>

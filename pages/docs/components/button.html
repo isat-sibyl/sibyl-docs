@@ -1,0 +1,40 @@
+<template layout="main_layout" title="Components - Button">
+	<section>
+		<Component name="Markdown" style="max-width: 800px">
+			# Button Component
+
+			The `Button` component is a versatile, styled button element that can be used for various purposes in a web application. It can be used to navigate to different parts of the same page, to different pages, or to external links.
+
+			## Props
+
+			| Prop      | Description                                             | Type   |
+			|-----------|---------------------------------------------------------|--------|
+			| color     | The background color of the button. If no color is passed, it defaults to the primary color defined in the application's CSS variables. | String |
+			| iconLeft  | The icon to be displayed to the left of the button label. | String |
+			| iconRight | The icon to be displayed to the right of the button label. | String |
+			| label     | The text displayed on the button. | String |
+			| page      | The path to the page to which the button should link. | String |
+			| href      | The external URL to which the button should link. | String |
+			| anchor    | The anchor on the current page to which the button should link. | String |
+
+			## Slots
+
+			| Slot  | Description |
+			| ----- | ----------- |
+			| Default | The content that is displayed within the button. |
+
+			## Exclusivity of Props
+
+			The `Button` component determines its behavior based on the presence of the `page`, `href`, and `anchor` props. These are mutually exclusive and at least one should be defined in order to avoid undefined behavior. 
+
+			## General Usage Notes
+
+			1. The `color` prop can take both direct color values (hex, rgb, or hsl) or a color. If a color is received, it's interpreted as a CSS variable name. For instance, `primary` evaluates to `--var(primary)`.
+			2. The `iconLeft` and `iconRight` props can be used to specify icons to be displayed on either side of the button label. These icons are rendered as `Icon` components and are spaced appropriately from the label.
+			3. The `Button` component automatically decides which type of button to render based on the `page`, `href`, and `anchor` props.
+			4. The `Button` component adds a hover effect that increases the button's scale, giving it a 'popping' effect.
+			5. The `Button` component has a responsive design, with a smaller font size under 375px screen width.
+
+		</Component>
+	</section>
+</template>

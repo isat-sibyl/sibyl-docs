@@ -1,0 +1,134 @@
+{
+	"routes" : [
+		{
+			"name" : "Home",
+			"path" : ""
+		},
+		{
+			"name" : "Getting started",
+			"path" : "start"
+		}
+	],
+	"drawerItems" : [
+		{
+			"id" : "drawer-install",
+			"icon" : "start",
+			"label" : "Instalation",
+			"page" : "start"
+		},
+		{
+			"id" : "drawer-settings",
+			"icon" : "settings",
+			"label" : "Settings",
+			"page" : "docs/settings"
+		},
+		{
+			"id" : "drawer-project-structure",
+			"icon" : "list",
+			"label" : "Project Structure",
+			"page" : "docs/project-structure"
+		},
+		{
+			"id" : "drawer-variables",
+			"icon" : "code",
+			"label" : "Variables",
+			"page" : "docs/variables"
+		},
+		{
+			"id" : "drawer-locales",
+			"icon" : "language",
+			"label" : "Locales",
+			"page" : "docs/locales"
+		},
+		{
+			"id" : "drawer-layouts",
+			"icon" : "description",
+			"label" : "Layouts",
+			"page" : "docs/layouts"
+		},
+		{
+			"id" : "drawer-pages",
+			"icon" : "pages",
+			"label" : "Pages",
+			"page" : "docs/pages"
+		},
+		{
+			"id" : "drawer-components",
+			"icon" : "widgets",
+			"label" : "Components",
+			"page" : "docs/components"
+		},
+		{
+			"id" : "drawer-conditional-rendering",
+			"icon" : "visibility",
+			"label" : "Conditional Rendering & Loops",
+			"page" : "docs/conditional-rendering"
+		},
+		{
+			"id" : "drawer-sibyl-components",
+			"icon" : "extension",
+			"label" : "Sibyl Components",
+			"children" : [
+				{
+						"id": "drawer-sibyl-components-accordion",
+						"icon": "arrow_drop_down_circle",
+						"label": "Accordion",
+						"page": "docs/components/accordion"
+				},
+				{
+						"id": "drawer-sibyl-components-button",
+						"icon": "left_click",
+						"label": "Button",
+						"page": "docs/components/button"
+				},
+				{
+						"id": "drawer-sibyl-components-card",
+						"icon": "note",
+						"label": "Card",
+						"page": "docs/components/card"
+				},
+				{
+						"id": "drawer-sibyl-components-carousel-slide",
+						"icon": "slideshow",
+						"label": "Carousel Slide",
+						"page": "docs/components/carousel-slide"
+				},
+				{
+						"id": "drawer-sibyl-components-carousel",
+						"icon": "view_carousel",
+						"label": "Carousel",
+						"page": "docs/components/carousel"
+				},
+				{
+						"id": "drawer-sibyl-components-chip",
+						"icon": "label",
+						"label": "Chip",
+						"page": "docs/components/chip"
+				},
+				{
+						"id": "drawer-sibyl-components-double-image-service",
+						"icon": "image_search",
+						"label": "Double Image Service",
+						"page": "docs/components/double-image-service"
+				},
+				{
+						"id": "drawer-sibyl-components-drawer-item",
+						"icon": "list",
+						"label": "Drawer Item",
+						"page": "docs/components/drawer-item"
+				},
+				{
+						"id": "drawer-sibyl-components-drawer",
+						"icon": "menu",
+						"label": "Drawer",
+						"page": "docs/components/drawer"
+				}
+			]
+
+		}
+	],
+
+	"contacts" : "Contacts",
+	"otherProjects" : "Other projects",
+	"siteDescription" : "A simple and lightweight JavaScript library for creating web applications."
+}

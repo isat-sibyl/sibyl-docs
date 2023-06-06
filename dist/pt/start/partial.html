@@ -1,0 +1,148 @@
+<template layout="main_layout" title="Start">
+ <section>
+  <div class="markdown-container" style="max-width: 800px">
+   <h1>
+    Sibyl
+   </h1>
+   <p>
+    Sibyl is a static site builder written in Python. It allows you to easily create, develop, and build static websites with a Single Page Application (SPA) feel. With its simple-to-use commands, hot reloading capabilities, and partial page loading, Sibyl makes your web development process seamless and efficient.
+   </p>
+   <h2>
+    Features
+   </h2>
+   <ul>
+    <li>
+     Blazing fast websites
+    </li>
+    <li>
+     Ready for deployment to Cloudflare Pages
+    </li>
+    <li>
+     Hot reloading on the development server
+    </li>
+    <li>
+     Navigation between pages like a SPA with partial page loading
+    </li>
+   </ul>
+   <h2>
+    Installation
+   </h2>
+   <p>
+    Ensure that you have Python 3.7 or higher installed. You can download the latest version of Python from
+    <a href="https://www.python.org/downloads/">
+     https://www.python.org/downloads/
+    </a>
+    .
+   </p>
+   <p>
+    To install Sibyl, make sure you have access to this GitHub repo from your shell (see adding ssh keys below) and run the following command:
+   </p>
+   <div class="codehilite">
+    <pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>git+ssh://git@github.com/isat-sibyl/sibyl.git#egg<span class="o">=</span>sibyl<span class="o">[</span>dev<span class="o">]</span>
+</code></pre>
+   </div>
+   <h2>
+    Adding ssh keys to your shell (if needed)
+   </h2>
+   <p>
+    If you do not have access to this GitHub repo from your shell, you will need to add your ssh keys to your shell. To do this, follow the instructions below:
+   </p>
+   <ol>
+    <li>
+     Generate a new ssh key by running the following command (replace the email with your own):
+    </li>
+   </ol>
+   <div class="codehilite">
+    <pre><span></span><code>ssh-keygen<span class="w"> </span>-t<span class="w"> </span>ed25519<span class="w"> </span>-C<span class="w"> </span><span class="s2">"your_email@example.com"</span>
+</code></pre>
+   </div>
+   <ol>
+    <li>
+     Manually clone any repo via ssh before proceeding to the next step. For example, to clone this repo, run:
+    </li>
+   </ol>
+   <div class="codehilite">
+    <pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:isat-sibyl/sibyl.git
+</code></pre>
+   </div>
+   <p>
+    You will be prompted to trust the host. Verify that the fingerprint matches GitHub's fingerprint and type
+    <code>
+     yes
+    </code>
+    to continue.
+   </p>
+   <ol>
+    <li>
+     Follow the steps in
+     <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account">
+      GitHub's documentation
+     </a>
+     to add your ssh key to your GitHub account.
+    </li>
+   </ol>
+   <h2>
+    Usage
+   </h2>
+   <h3>
+    Initializing a new project
+   </h3>
+   <p>
+    To create a new project, navigate to the desired directory and run the following command:
+   </p>
+   <div class="codehilite">
+    <pre><span></span><code>sibyl init
+</code></pre>
+   </div>
+   <p>
+    or
+   </p>
+   <div class="codehilite">
+    <pre><span></span><code>python<span class="w"> </span>-m<span class="w"> </span>sibyl.init
+</code></pre>
+   </div>
+   <p>
+    This will generate a new project structure with the necessary files.
+   </p>
+   <h3>
+    Starting a development server
+   </h3>
+   <p>
+    To start a development server with hot reloading, navigate to your project directory and run:
+   </p>
+   <div class="codehilite">
+    <pre><span></span><code>sibyl<span class="w"> </span>dev
+</code></pre>
+   </div>
+   <p>
+    Once the server is up and running, you can view your website at
+    <a href="http://localhost:8000">
+     http://localhost:8000
+    </a>
+    .
+   </p>
+   <h3>
+    Building for production
+   </h3>
+   <p>
+    To build your website for production, navigate to your project directory and run:
+   </p>
+   <div class="codehilite">
+    <pre><span></span><code>sibyl build
+</code></pre>
+   </div>
+   <p>
+    This command will generate a
+    <code>
+     dist
+    </code>
+    folder containing the production-ready static files.
+   </p>
+   <div class="codehilite">
+    <pre><span></span><code><span class="kn">from</span> <span class="nn">sibyl</span> <span class="kn">import</span> <span class="n">Sibyl</span>
+<span class="n">app</span> <span class="o">=</span> <span class="n">Sibyl</span><span class="p">()</span>
+</code></pre>
+   </div>
+  </div>
+ </section>
+</template>

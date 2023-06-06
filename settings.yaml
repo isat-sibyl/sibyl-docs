@@ -1,0 +1,22 @@
+root: "/"
+default_locale: "en"
+open_browser: true
+debug: true
+
+max_component_nesting: 100
+components_paths: 
+  - "components"
+  - "${SIBYL_PATH}/components"
+layouts_paths:
+  - "layouts"
+  - "${SIBYL_PATH}/layouts"
+
+treat_warnings_as_errors: true
+# cdn_url: ${SIBYL_PATH}
+  
+pages_path: "pages"
+build_path: "dist"
+locales_path: "locales"
+static_path: "static"
+dev_port: 8080
+websockets_port: 8091

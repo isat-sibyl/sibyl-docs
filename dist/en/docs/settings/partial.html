@@ -1,0 +1,309 @@
+<template layout="main_layout" title="Pages">
+ <section>
+  <div class="markdown-container" style="max-width: 800px">
+   <h1>
+    Settings
+   </h1>
+   <p>
+    In Sibyl, settings are stored in a file named
+    <code>
+     settings.yaml
+    </code>
+    . These settings configure the behavior of the Sibyl framework and your specific project.
+   </p>
+   <p>
+    An example
+    <code>
+     settings.yaml
+    </code>
+    could look like this:
+   </p>
+   <div class="codehilite">
+    <pre><span></span><code><span class="nt">root</span><span class="p">:</span><span class="w"> </span><span class="s">"/"</span>
+<span class="nt">default_locale</span><span class="p">:</span><span class="w"> </span><span class="s">"en"</span>
+<span class="nt">open_browser</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="nt">debug</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="nt">max_component_nesting</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
+<span class="nt">components_paths</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">"components"</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">"{$SIBYL_PATH}/components"</span><span class="p p-Indicator">]</span>
+<span class="nt">layouts_paths</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">"layouts"</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">"{$SIBYL_PATH}/layouts"</span><span class="p p-Indicator">]</span>
+<span class="nt">root_folders</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">"favicon"</span><span class="p p-Indicator">]</span>
+<span class="nt">pages_path</span><span class="p">:</span><span class="w"> </span><span class="s">"pages"</span>
+<span class="nt">build_path</span><span class="p">:</span><span class="w"> </span><span class="s">"dist"</span>
+<span class="nt">locales_path</span><span class="p">:</span><span class="w"> </span><span class="s">"locales"</span>
+<span class="nt">static_path</span><span class="p">:</span><span class="w"> </span><span class="s">"static"</span>
+<span class="nt">cdn_url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">f"https://cdn.sibyl.dev/{version}"</span>
+<span class="nt">treat_warnings_as_errors</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="nt">dev_port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8080</span>
+<span class="nt">websockets_port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8081</span>
+</code></pre>
+   </div>
+   <p>
+    In fact, these are the default settings. You can override them by creating a
+    <code>
+     settings.yaml
+    </code>
+    file in your project's root directory.
+   </p>
+   <h2>
+    Properties
+   </h2>
+   <table>
+    <thead>
+     <tr>
+      <th>
+       Property
+      </th>
+      <th>
+       Default Value
+      </th>
+      <th>
+       Description
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       <code>
+        root
+       </code>
+      </td>
+      <td>
+       <code>
+        "/"
+       </code>
+      </td>
+      <td>
+       The root path of the application
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        default_locale
+       </code>
+      </td>
+      <td>
+       <code>
+        "en"
+       </code>
+      </td>
+      <td>
+       The default locale for the application
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        open_browser
+       </code>
+      </td>
+      <td>
+       <code>
+        true
+       </code>
+      </td>
+      <td>
+       Whether to automatically open the browser
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        debug
+       </code>
+      </td>
+      <td>
+       <code>
+        false
+       </code>
+      </td>
+      <td>
+       Whether to enable debug mode
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        max_component_nesting
+       </code>
+      </td>
+      <td>
+       <code>
+        100
+       </code>
+      </td>
+      <td>
+       The maximum allowed nesting level for components
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        components_paths
+       </code>
+      </td>
+      <td>
+       <code>
+        ["components", "{$SIBYL_PATH}/components"]
+       </code>
+      </td>
+      <td>
+       List of paths to search for components
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        layouts_paths
+       </code>
+      </td>
+      <td>
+       <code>
+        ["layouts", "{$SIBYL_PATH}/layouts"]
+       </code>
+      </td>
+      <td>
+       List of paths to search for layouts
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        root_folders
+       </code>
+      </td>
+      <td>
+       <code>
+        ["favicon"]
+       </code>
+      </td>
+      <td>
+       List of root folders to be included in the build path
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        pages_path
+       </code>
+      </td>
+      <td>
+       <code>
+        "pages"
+       </code>
+      </td>
+      <td>
+       The path where the pages are located
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        build_path
+       </code>
+      </td>
+      <td>
+       <code>
+        "dist"
+       </code>
+      </td>
+      <td>
+       The path where the build artifacts will be generated
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        locales_path
+       </code>
+      </td>
+      <td>
+       <code>
+        "locales"
+       </code>
+      </td>
+      <td>
+       The path where the locale files are located
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        static_path
+       </code>
+      </td>
+      <td>
+       <code>
+        "static"
+       </code>
+      </td>
+      <td>
+       The path where the static files are located
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        cdn_url
+       </code>
+      </td>
+      <td>
+       <code>
+        "https://cdn.sibyl.dev/{version}"
+       </code>
+      </td>
+      <td>
+       The URL for the Sibyl CDN
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        treat_warnings_as_errors
+       </code>
+      </td>
+      <td>
+       <code>
+        false
+       </code>
+      </td>
+      <td>
+       Whether to treat warnings as errors
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        dev_port
+       </code>
+      </td>
+      <td>
+       <code>
+        8080
+       </code>
+      </td>
+      <td>
+       The port number for the development server
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        websockets_port
+       </code>
+      </td>
+      <td>
+       <code>
+        8081
+       </code>
+      </td>
+      <td>
+       The port number for the websockets server
+      </td>
+     </tr>
+    </tbody>
+   </table>
+  </div>
+ </section>
+</template>

@@ -1,0 +1,33 @@
+<template layout="main_layout" title="Components - Drawer">
+	<section>
+		<Component name="Markdown" style="max-width: 800px">
+			# Drawer Component
+
+			The `Drawer` component is used for a side navigation panel, often seen in responsive design for mobile devices, or as a part of the dashboard on larger screens.
+
+			## Props
+
+			The `Drawer` component takes no props directly.
+
+			## Slots
+
+			The `Drawer` component provides a slot for custom content. `DrawerItem` components should be created within this slot.
+
+			## CSS Variables
+
+			The `Drawer` component uses the following CSS variables:
+
+			| Variable | Description |
+			| -------- | ----------- |
+			| `--header-height` | The height of the header component. Used so the components don't overlap |
+			| `--header-bg` | The background color of the header. Adopted by the drawer |
+			| `--accent-secondary-transition` | The color of the transition accent on the secondary component. |
+
+			## General Usage Notes
+
+			* The `Drawer` component should ideally be used as a part of a larger layout or page component.
+			* The `Drawer` component also includes a `DrawerItem` component, which is used internally to render each item and its children (if any). The `DrawerItem` component uses recursion to render nested items.
+
+		</Component>
+	</section>
+</template>

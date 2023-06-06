@@ -1,0 +1,200 @@
+<template layout="main_layout" title="Components - Double Image Service">
+ <section>
+  <div class="markdown-container" style="max-width: 800px">
+   <h1>
+    Double Service Component
+   </h1>
+   <p>
+    The
+    <code>
+     Double Service
+    </code>
+    component presents a dual-panel content display, each with its own title, subtitle and content, separated by an image.
+   </p>
+   <h2>
+    Props
+   </h2>
+   <p>
+    The
+    <code>
+     Double Service
+    </code>
+    component accepts the following props:
+   </p>
+   <table>
+    <thead>
+     <tr>
+      <th>
+       Prop
+      </th>
+      <th>
+       Description
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       <code>
+        title
+       </code>
+      </td>
+      <td>
+       Sets the title for the left-side content.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        subtitle
+       </code>
+      </td>
+      <td>
+       Sets the subtitle for the left-side content.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        content
+       </code>
+      </td>
+      <td>
+       Sets the content for the left-side content.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        image
+       </code>
+      </td>
+      <td>
+       Sets the source of the image to be displayed between the two panels.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        title2
+       </code>
+      </td>
+      <td>
+       Sets the title for the right-side content.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        subtitle2
+       </code>
+      </td>
+      <td>
+       Sets the subtitle for the right-side content.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        content2
+       </code>
+      </td>
+      <td>
+       Sets the content for the right-side content.
+      </td>
+     </tr>
+    </tbody>
+   </table>
+   <h2>
+    Slots
+   </h2>
+   <p>
+    The
+    <code>
+     Double Service
+    </code>
+    component provides two slots for customization:
+   </p>
+   <table>
+    <thead>
+     <tr>
+      <th>
+       Slot
+      </th>
+      <th>
+       Description
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       <code>
+        LeftContent
+       </code>
+      </td>
+      <td>
+       The default content of this slot will be replaced with the provided
+       <code>
+        content
+       </code>
+       prop, or you can manually override it.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        RightContent
+       </code>
+      </td>
+      <td>
+       The default content of this slot will be replaced with the provided
+       <code>
+        content2
+       </code>
+       prop, or you can manually override it.
+      </td>
+     </tr>
+    </tbody>
+   </table>
+   <h2>
+    CSS Variables
+   </h2>
+   <p>
+    The
+    <code>
+     Double Service
+    </code>
+    component does not use any CSS variables.
+   </p>
+   <h2>
+    Global Variables
+   </h2>
+   <p>
+    The
+    <code>
+     Double Service
+    </code>
+    component does not use any global variables.
+   </p>
+   <h2>
+    General Usage Notes
+   </h2>
+   <p>
+    The
+    <code>
+     Double Service
+    </code>
+    component is flexible and can adapt to various viewport sizes due to its use of the CSS
+    <code>
+     flex
+    </code>
+    layout model and
+    <code>
+     max-width
+    </code>
+    properties. It adjusts the positioning of the content blocks based on the available space.
+   </p>
+  </div>
+ </section>
+</template>

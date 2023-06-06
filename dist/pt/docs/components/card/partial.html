@@ -1,0 +1,99 @@
+<template layout="main_layout" title="Components - Card">
+ <section>
+  <div class="markdown-container" style="max-width: 800px">
+   <h1>
+    Card Component
+   </h1>
+   <p>
+    The
+    <code>
+     Card
+    </code>
+    component is a container element with a pre-defined style. It provides a way to group and present related content in a flexible and extensible container with a shadow effect to give it a 'lifting' appearance.
+   </p>
+   <h2>
+    Props
+   </h2>
+   <p>
+    The
+    <code>
+     Card
+    </code>
+    component does not take any specific props.
+   </p>
+   <h2>
+    Slots
+   </h2>
+   <table>
+    <thead>
+     <tr>
+      <th>
+       Slot
+      </th>
+      <th>
+       Description
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       Default
+      </td>
+      <td>
+       The content to be displayed within the card.
+      </td>
+     </tr>
+    </tbody>
+   </table>
+   <h2>
+    General Usage Notes
+   </h2>
+   <ol>
+    <li>
+     The
+     <code>
+      Card
+     </code>
+     component comes with a box-shadow effect to create the appearance of depth. This is particularly useful for distinguishing the card from the background, especially on light-colored themes.
+    </li>
+    <li>
+     Images placed as the first child within the card have styles applied to them to span the full width of the card.
+    </li>
+    <li>
+     The
+     <code>
+      Card
+     </code>
+     component has a hover effect that increases its scale, giving it a 'popping' effect. This effect can be disabled by adding a class of
+     <code>
+      no-hover
+     </code>
+     to the component.
+    </li>
+    <li>
+     The
+     <code>
+      Card
+     </code>
+     component adapts to the size of its content, with a
+     <code>
+      height
+     </code>
+     set to
+     <code>
+      fit-content
+     </code>
+     .
+    </li>
+    <li>
+     The
+     <code>
+      Card
+     </code>
+     component is designed with a maximum width of 300px and a minimum padding of 20px.
+    </li>
+   </ol>
+  </div>
+ </section>
+</template>

@@ -1,0 +1,121 @@
+<template layout="main_layout" title="Components - Drawer">
+ <section>
+  <div class="markdown-container" style="max-width: 800px">
+   <h1>
+    Drawer Component
+   </h1>
+   <p>
+    The
+    <code>
+     Drawer
+    </code>
+    component is used for a side navigation panel, often seen in responsive design for mobile devices, or as a part of the dashboard on larger screens.
+   </p>
+   <h2>
+    Props
+   </h2>
+   <p>
+    The
+    <code>
+     Drawer
+    </code>
+    component takes no props directly.
+   </p>
+   <h2>
+    Slots
+   </h2>
+   <p>
+    The
+    <code>
+     Drawer
+    </code>
+    component provides a slot for custom content.
+    <code>
+     DrawerItem
+    </code>
+    components should be created within this slot.
+   </p>
+   <h2>
+    CSS Variables
+   </h2>
+   <p>
+    The
+    <code>
+     Drawer
+    </code>
+    component uses the following CSS variables:
+   </p>
+   <table>
+    <thead>
+     <tr>
+      <th>
+       Variable
+      </th>
+      <th>
+       Description
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       <code>
+        --header-height
+       </code>
+      </td>
+      <td>
+       The height of the header component. Used so the components don't overlap
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        --header-bg
+       </code>
+      </td>
+      <td>
+       The background color of the header. Adopted by the drawer
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        --accent-secondary-transition
+       </code>
+      </td>
+      <td>
+       The color of the transition accent on the secondary component.
+      </td>
+     </tr>
+    </tbody>
+   </table>
+   <h2>
+    General Usage Notes
+   </h2>
+   <ul>
+    <li>
+     The
+     <code>
+      Drawer
+     </code>
+     component should ideally be used as a part of a larger layout or page component.
+    </li>
+    <li>
+     The
+     <code>
+      Drawer
+     </code>
+     component also includes a
+     <code>
+      DrawerItem
+     </code>
+     component, which is used internally to render each item and its children (if any). The
+     <code>
+      DrawerItem
+     </code>
+     component uses recursion to render nested items.
+    </li>
+   </ul>
+  </div>
+ </section>
+</template>
