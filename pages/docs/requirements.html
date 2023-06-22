@@ -1,0 +1,21 @@
+<template layout="main_layout" title="Requirements">
+	<section>
+		<Component name="Markdown" style="max-width: 800px">
+			# Requirements
+
+			Requirements are imported styles or scripts that your page or components depend on. You can import requirements in your layouts or components using the `Requirement` tag.
+			They can be both local and external files.
+
+			## Example
+
+			```html
+			&lt;Requirement name="material_icons" type="style" src="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"&gt;&lt;/Requirement&gt;
+			&lt;Requirement name="particles-js" type="script" src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"&gt;&lt;/Requirement&gt;
+			&lt;Requirement name="load-schedule" type="script" src="load-schedule.js"&gt;&lt;/Requirement&gt;
+			```
+
+			The name attribute is the name of the requirement. This is used to check if the requirement has already been imported. If it has, it will not be imported again. Therefore, it is important to give each requirement a unique name.
+
+		</Component>
+	</section>
+</template>

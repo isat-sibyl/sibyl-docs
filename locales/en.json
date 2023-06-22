@@ -65,6 +65,18 @@
 			"page" : "docs/conditional-rendering"
 		},
 		{
+			"id" : "drawer-requirements",
+			"icon" : "assignment",
+			"label" : "Requirements",
+			"page" : "docs/requirements"
+		},
+		{
+			"id" : "drawer-flex",
+			"icon" : "view_quilt",
+			"label" : "Flex",
+			"page" : "docs/flex"
+		},
+		{
 			"id" : "drawer-sibyl-components",
 			"icon" : "extension",
 			"label" : "Sibyl Components",
